@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightblue;
+  font-family: 'Segoe UI';
+  color: #000;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0284c7;
+  font-weight: 600;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+/* untuk home page */
+.hero-title-home {
+	font-size: 36px;
+	color: #000;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.hero-title {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #0284c7;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+}
+
+/* untuk about page */
+.info-detail img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e0f2fe;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #000;
+}
+
+th {
+  color: #000;
+  background-color: transparent;
+  font-weight: bold;
+  width: 30%;
+}
+
+/* untuk kontak page */
+.contact-list {
+  list-style-type: none;
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list strong {
+  color: #000;
+}
+
+.contact-list a {
+  color: blue;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: darkblue;
+}
