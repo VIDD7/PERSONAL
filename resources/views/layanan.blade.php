@@ -1,9 +1,6 @@
-@extends('layouts.app')
+<x-layouts>
+    <x-slot:title>{{ $title }}</x-slot:title>
 
-@section('title', 'LAYANAN PAGE')
-@section('header_title', 'Layanan')
-
-@section('content')
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 
         <div
@@ -12,18 +9,19 @@
                 <div class="flex items-center justify-center size-12 rounded-lg bg-indigo-500/10 text-indigo-400 mb-4">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 0a9.004 9.004 0 0 1 8.716 6.747M12 3a9.004 9.004 0 0 0-8.716 6.747M10.25 9.75h3.5m-3.5 4.5h3.5" />
+                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 18c2.485 0 4.5-4.03 4.5-9s-2.015-9-4.5-9M3 9h18M3 15h18" />
                     </svg>
                 </div>
-                <h2 class="text-xl font-bold text-white tracking-tight">Pembuatan Website</h2>
-                <p class="mt-3 text-sm text-gray-400 leading-relaxed">Layanan pembuatan website kustom yang responsif,
-                    modern, dan dioptimalkan dengan performa tinggi menggunakan framework mutakhir seperti Laravel dan
-                    Tailwind CSS.</p>
+                <h2 class="text-xl font-bold text-white tracking-tight">Web Development</h2>
+                <p class="mt-3 text-sm text-gray-400 leading-relaxed">
+                    Pengembangan aplikasi berbasis web yang responsif, modern, dan performant menggunakan teknologi
+                    Native PHP, Laravel Framework, Tailwind CSS, hingga integrasi database.
+                </p>
             </div>
             <div class="mt-6">
-                <a href="https://vstra.cloud" target="_blank"
+                <a href="https://www.instagram.com/vidyn_" target="_blank"
                     class="inline-flex w-full items-center justify-center rounded-lg bg-indigo-600 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-md hover:bg-indigo-500 transition-colors duration-200">
-                    Lihat Portofolio
+                    Chat via Instagram
                 </a>
             </div>
         </div>
@@ -38,9 +36,10 @@
                     </svg>
                 </div>
                 <h2 class="text-xl font-bold text-white tracking-tight">Development Aplikasi & Hosting</h2>
-                <p class="mt-3 text-sm text-gray-400 leading-relaxed">Pengembangan sistem aplikasi web terintegrasi
-                    back-end, manajemen database, serta penyediaan deployment aplikasi andal langsung ke server/cloud
-                    hosting pilihan.</p>
+                <p class="mt-3 text-sm text-gray-400 leading-relaxed">
+                    Pengembangan sistem aplikasi web terintegrasi back-end, manajemen database, serta penyediaan
+                    deployment aplikasi andal langsung ke server/cloud hosting pilihan.
+                </p>
             </div>
             <div class="mt-6">
                 <a href="https://panel.vvid.my.id/" target="_blank"
@@ -60,9 +59,10 @@
                     </svg>
                 </div>
                 <h2 class="text-xl font-bold text-white tracking-tight">Infrastruktur Jaringan</h2>
-                <p class="mt-3 text-sm text-gray-400 leading-relaxed">Konfigurasi topologi jaringan profesional, manajemen
-                    perangkat MikroTik/OpenWrt, setup VPN Tunneling aman, serta implementasi interkoneksi hardware jaringan
-                    lokal.</p>
+                <p class="mt-3 text-sm text-gray-400 leading-relaxed">
+                    Konfigurasi topologi jaringan profesional, manajemen perangkat MikroTik/OpenWrt, setup VPN Tunneling
+                    aman, serta implementasi interkoneksi hardware jaringan lokal.
+                </p>
             </div>
             <div class="mt-6">
                 <a href="https://www.instagram.com/vidyn_" target="_blank"
@@ -73,4 +73,4 @@
         </div>
 
     </div>
-@endsection
+</x-layouts>

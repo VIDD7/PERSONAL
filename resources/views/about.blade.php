@@ -1,9 +1,6 @@
-@extends('layouts.app')
+<x-layouts>
+    <x-slot:title>{{ $title }}</x-slot:title>
 
-@section('title', 'ABOUT PAGE')
-@section('header_title', 'About Us')
-
-@section('content')
     <div
         class="mx-auto max-w-3xl bg-gray-800/40 p-10 sm:p-12 rounded-2xl border border-white/5 shadow-xl flex flex-col md:flex-row gap-10 items-center md:items-start">
         <div class="shrink-0 mx-auto md:mx-0">
@@ -12,17 +9,14 @@
         </div>
 
         <div class="w-full">
-            <h2 class="text-3xl font-bold text-indigo-400 mb-6 tracking-tight text-center md:text-left">Informasi Tentang
-                Saya</h2>
+            <h2 class="text-3xl font-bold text-indigo-400 mb-6 tracking-tight text-center md:text-left">
+                Informasi Tentang Saya
+            </h2>
             <div class="overflow-hidden">
                 <table class="w-full text-left text-base border-collapse divide-y divide-white/5">
                     <tr class="transition-colors">
                         <th class="py-3.5 pr-4 font-semibold text-gray-400 w-1/3">Nama Lengkap</th>
                         <td class="py-3.5">{{ $nama }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">NPM</th>
-                        <td class="py-3.5">{{ $npm }}</td>
                     </tr>
                     <tr class="transition-colors">
                         <th class="py-3.5 pr-4 font-semibold text-gray-400">Kelas</th>
@@ -52,4 +46,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-layouts>
