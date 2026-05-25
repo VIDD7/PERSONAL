@@ -19,9 +19,9 @@
                 </p>
             </div>
             <div class="mt-6">
-                <a href="https://www.instagram.com/vidyn_" target="_blank"
+                <a href="https://vstra.cloud" target="_blank"
                     class="inline-flex w-full items-center justify-center rounded-lg bg-indigo-600 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-md hover:bg-indigo-500 transition-colors duration-200">
-                    Chat via Instagram
+                    Lihat Portofolio
                 </a>
             </div>
         </div>
