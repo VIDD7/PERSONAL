@@ -3,16 +3,16 @@
     <div class="max-w-3xl mx-auto py-8">
         <article class="space-y-4">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                {{ $post['title'] }}
+                {{ $post->title }}
             </h1>
 
             <div class="text-sm text-gray-400 border-b border-white/10 pb-4">
-                By <a href="#" class="text-indigo-400 hover:underline font-medium">{{ $post['author'] }}</a> | 25
-                May 2026
+                By <a href="#" class="text-indigo-400 hover:underline font-medium">{{ $post->author }}</a> | 25
+                {{ $post->created_at->format('d F Y') }}
             </div>
 
             <p class="text-lg text-gray-300 leading-relaxed text-justify pt-4">
-                {{ $post['body'] }}
+                {{ $post->body }}
             </p>
 
             <div class="pt-8">

@@ -21,26 +21,16 @@ Route::get('/layanan', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog', ['title' => "Blog", 'posts' => Post::all()]);
+        return view('blog', [
+        'title' => "Blog",
+        'posts' => Post::all() // ambil semua data artikel dari model Post dan kirimkan ke halaman view 'blog'
+    ]);
 });
 
 Route::get('/blog/{slug}', function ($slug) {
-    // Ambil seluruh data posts dari model
-    $allPosts = Post::all();
-    
-    // Cari 1 artikel yang nilai 'slug'-nya sama dengan parameter {slug} di URL
-    $post = Arr::first($allPosts, function ($post) use ($slug) {
-        return $post['slug'] == $slug;
-    });
-    
-    // Jika artikel tidak ditemukan di array, lemparkan error kode 404
-    if (! $post) {
-        abort(404);
-    }
-    
-    // Kirimkan data artikel tunggal yang ditemukan ke halaman view 'post'
+    $post = Post::where('slug', $slug)->firstOrFail(); // cari artiel berdasarkan slug, jika tidak ditemukan maka tampilkan error 404
     return view('post', [
-        'title' => 'Detail Blog',
+        'title' => $post->title, // mengambil judul artikel untuk ditampilkan sebagai title tab browser
         'post' => $post
     ]);
 });
