@@ -30,7 +30,7 @@ Route::get('/blog', function () {
     // Jika ada filter kategori, cari berdasarkan kategori, jika tidak ada, tampilkan semua urutan terbaru
     $posts = $category 
         ? Post::where('category', $category)->orderByDesc('published_at')->get() 
-        : Post::orderByDesc('published_at')->get();
+        : Post::latest('published_at')->get();
 
     return view('blog', [
         'title' => "Blog Page",
