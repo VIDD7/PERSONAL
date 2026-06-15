@@ -3,13 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use Illuminate\Support\Arr;
+use App\Models\Profile;
 
 Route::get('/', function () {
     return view('home', ['title' => "Home", 'nama' => "David Guntoro"]);
 });
 
 Route::get('/about', function () {
-        return view('about', ['title' => "About", 'nama' => "David Guntoro", 'npm' => "1062535", 'kelas' => "1 TRPL B", 'pendidikan' => "D4 Teknologi Rekayasa Perangkat Lunak, Politeknik Manufaktur Negeri Bangka Belitung", 'hobi' => "Membaca buku keuangan, mendengarkan musik, dan menonton film", 'domisili' => "Bangka, Indonesia", 'fokus' => "Web Development (Laravel, PHP, JS) & Network Engineering (MikroTik, OpenWrt)", 'minat' => "Cybersecurity (CTF), Cloud Infrastructure, dan UI/UX Design"]);
+    return view('about', [
+        'title' => "About Us",
+        'profile' => Profile::first()
+    ]);
 });
 
 Route::get('/kontak', function () {
@@ -21,9 +25,16 @@ Route::get('/layanan', function () {
 });
 
 Route::get('/blog', function () {
-        return view('blog', [
-        'title' => "Blog",
-        'posts' => Post::all() // ambil semua data artikel dari model Post dan kirimkan ke halaman view 'blog'
+    $category = request('category'); // Mengambil data ?category= dari URL
+    
+    // Jika ada filter kategori, cari berdasarkan kategori, jika tidak ada, tampilkan semua urutan terbaru
+    $posts = $category 
+        ? Post::where('category', $category)->orderByDesc('published_at')->get() 
+        : Post::orderByDesc('published_at')->get();
+
+    return view('blog', [
+        'title' => "Blog Page",
+        'posts' => $posts
     ]);
 });
 

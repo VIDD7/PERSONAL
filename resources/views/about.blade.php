@@ -1,49 +1,59 @@
 <x-layouts>
     <x-slot:title>{{ $title }}</x-slot:title>
-
-    <div
-        class="mx-auto max-w-3xl bg-gray-800/40 p-10 sm:p-12 rounded-2xl border border-white/5 shadow-xl flex flex-col md:flex-row gap-10 items-center md:items-start">
-        <div class="shrink-0 mx-auto md:mx-0">
-            <img src="img/me.png" alt="foto-david"
-                class="w-44 h-44 rounded-2xl object-cover border-2 border-indigo-500/50 p-1 shadow-lg">
-        </div>
-
-        <div class="w-full">
-            <h2 class="text-3xl font-bold text-indigo-400 mb-6 tracking-tight text-center md:text-left">
-                Informasi Tentang Saya
-            </h2>
-            <div class="overflow-hidden">
-                <table class="w-full text-left text-base border-collapse divide-y divide-white/5">
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400 w-1/3">Nama Lengkap</th>
-                        <td class="py-3.5">{{ $nama }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">Kelas</th>
-                        <td class="py-3.5">{{ $kelas }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">Pendidikan</th>
-                        <td class="py-3.5 leading-relaxed">{{ $pendidikan }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">Hobi</th>
-                        <td class="py-3.5 leading-relaxed">{{ $hobi }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">Domisili</th>
-                        <td class="py-3.5">{{ $domisili }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">Fokus Keahlian</th>
-                        <td class="py-3.5 text-indigo-300 leading-relaxed">{{ $fokus }}</td>
-                    </tr>
-                    <tr class="transition-colors">
-                        <th class="py-3.5 pr-4 font-semibold text-gray-400">Minat & Aktivitas</th>
-                        <td class="py-3.5 text-gray-300 leading-relaxed">{{ $minat }}</td>
-                    </tr>
-                </table>
+    
+    <div class="max-w-4xl mx-auto py-8">
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-8 rounded-2xl border border-white/10 backdrop-blur-md">
+            
+            <div class="shrink-0">
+                <img src="{{ asset($profile->avatar) }}" alt="{{ $profile->name }}" class="size-48 rounded-2xl object-cover outline outline-offset-2 outline-indigo-500" />
             </div>
+            
+            <div class="space-y-4 w-full">
+                <div class="flex items-baseline gap-3">
+                    <h1 class="text-xl font-extrabold text-white tracking-tight">{{ $profile->name }}</h1>
+                    <span class="text-sm font-medium px-2.5 py-0.5 rounded-full border">{{ $profile->kelas }}</span>
+                </div>
+                
+                <p class="text-gray-300 text-justify font-light leading-relaxed">
+                    {{ $profile->bio }}
+                </p>
+                
+                <div class="border-t border-white/10 pt-4">
+                    <table class="w-full text-sm text-left text-gray-300">
+                        <tbody>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 font-medium text-indigo-400 w-1/4">Pendidikan</td>
+                                <td class="py-2 text-white">{{ $profile->pendidikan }}</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 font-medium text-indigo-400">Fokus Keahlian</td>
+                                <td class="py-2 text-white">{{ $profile->fokus }}</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 font-medium text-indigo-400">Minat Aktivitas</td>
+                                <td class="py-2 text-white">{{ $profile->minat }}</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 font-medium text-indigo-400">Hobi</td>
+                                <td class="py-2 text-white">{{ $profile->hobi }}</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 font-medium text-indigo-400">Email</td>
+                                <td class="py-2 text-white">{{ $profile->email }}</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 font-medium text-indigo-400">Telepon</td>
+                                <td class="py-2 text-white">{{ $profile->phone ?? '-' }}</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 font-medium text-indigo-400">Alamat</td>
+                                <td class="py-2 text-white">{{ $profile->address ?? '-' }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 </x-layouts>
