@@ -43,9 +43,8 @@
                             </button>
                             <el-menu anchor="bottom end" popover
                                 class="w-48 origin-top-right rounded-md bg-gray-900/95 p-1 backdrop-blur-md outline-1 -outline-offset-1 outline-white/10 shadow-2xl transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                                <a href="#"
-                                    class="block rounded-md px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white focus:bg-white/5 focus:outline-hidden">Your
-                                    profile</a>
+                                <a href="/profile"
+                                    class="block rounded-md px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white focus:bg-white/5 focus:outline-hidden">Profile Saya</a>
                                 <a href="#"
                                     class="block rounded-md px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white focus:bg-white/5 focus:outline-hidden">Settings</a>
                                 <a href="#"
@@ -106,9 +105,9 @@
                 </div>
 
                 <div class="space-y-1 px-2">
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Your
-                        profile</a>
+                    <a href="/profile"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Profile
+                        Saya</a>
                     <a href="#"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Settings</a>
                     <a href="#"

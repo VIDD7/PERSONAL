@@ -11,8 +11,14 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('about', [
-        'title' => "About Us",
-        'profile' => Profile::first()
+        'title' => "About Us"
+    ]);
+});
+
+Route::get('/profile', function () {
+    return view('profile', [
+        'title' => "Profile Saya",
+        'profile' => App\Models\Profile::first()
     ]);
 });
 
